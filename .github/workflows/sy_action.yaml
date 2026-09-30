@@ -12,16 +12,20 @@ jobs:
           echo "echo works as an alias for Write-Output in PowerShell"
 
       - name: Print OS runner type
-        run: Write-Output "OS runner type: ${{ runner.os }}"
+        run: |
+          Write-Output "OS runner type: ${{ runner.os }}"
 
       - name: Print event that triggered the workflow
-        run: Write-Output "Event name: ${{ github.event_name }}"
+        run: |
+          Write-Output "Event name: ${{ github.event_name }}"
 
       - name: Print branch name
-        run: Write-Output "Branch name: ${{ github.ref_name }}"
+        run: |
+          Write-Output "Branch name: ${{ github.ref_name }}"
 
       - name: Print repository name
-        run: Write-Output "Repository name: ${{ github.repository }}"
+        run: |
+          Write-Output "Repository name: ${{ github.repository }}"
 
       - name: Check out repository code
         uses: actions/checkout@v4
